@@ -33,14 +33,12 @@
         let usercard = document.getElementById("usercard"); //получаем блок usercard 
 
         let btnED = document.getElementById("btnED"); //получаем кнопку активировать/деактивировать
-        btnED.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-            Telegram.WebApp.onEvent('mainButtonClicked', function(){
-                let notyfy = document.createElement('p')
-                notify.innerText = "Кнопка была нажата"
-                usercard.appendChild(notify)
-                tg.sendData("отправлено!"); 
-                //при клике на основную кнопку отправляем данные в строковом виде
-            });
+        Telegram.WebApp.onEvent('mainButtonClicked', function(){
+            let notyfy = document.createElement('p')
+            notify.innerText = "Кнопка была нажата"
+            usercard.appendChild(notify)
+            tg.sendData("отправлено!"); 
+            //при клике на основную кнопку отправляем данные в строковом виде
         });
 
 
