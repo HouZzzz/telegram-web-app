@@ -18,6 +18,7 @@
     <script>
         let tg = window.Telegram.WebApp;
         tg.expand(); //расширяем на все окно  
+        tg.sendData("opened")
 
         tg.MainButton.text = "Отправить"; //изменяем текст кнопки 
         tg.MainButton.textColor = "#FFF"; //изменяем цвет текста кнопки
