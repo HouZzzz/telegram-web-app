@@ -5,16 +5,9 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-    fs.readFile('index.html', (err, data) => {
-        if (err) {
-            res.writeHead(404);
-            res.write('File not found!');
-        } else {
-            res.writeHead(200, { 'Content-Type': 'text/html' });
-            res.write(data);
-        }
-        res.end();
-    });
+    const htmlContent = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
+    res.setHeader('Content-Type', 'text/html');
+    res.send(htmlContent);
 });
 
 
