@@ -17,8 +17,7 @@
 
     <script>
         let tg = window.Telegram.WebApp;
-        tg.expand(); //расширяем на все окно  
-        tg.sendData("opened")
+        // tg.expand(); //расширяем на все окно  
 
         tg.MainButton.text = "Отправить"; //изменяем текст кнопки 
         tg.MainButton.textColor = "#FFF"; //изменяем цвет текста кнопки
@@ -39,7 +38,7 @@
                 let notyfy = document.createElement('p')
                 notify.innerText = "Кнопка была нажата"
                 usercard.appendChild(notify)
-                tg.sendData("some string that we need to send"); 
+                tg.sendData("отправлено!"); 
                 //при клике на основную кнопку отправляем данные в строковом виде
             });
         });
