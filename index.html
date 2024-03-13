@@ -21,6 +21,7 @@
 
         tg.MainButton.text = "Отправить"; //изменяем текст кнопки 
         tg.MainButton.textColor = "#FFFFF"; //изменяем цвет текста кнопки
+        tg.MainButton.show();
         Telegram.WebApp.MainButton.onClick(() => tg.sendData("отправлено!"));
 
 
