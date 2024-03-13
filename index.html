@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <p id="main">default value</p>
+
     <script>
         document.getElementById("main").innerHTML = '123';
 
         let tg = window.Telegram.WebApp;
         document.getElementById("main").innerHTML = 'asdasdas';
     </script>
-</head>
-<body>
-    <p id="main">default value</p>
 </body>
 </html>
