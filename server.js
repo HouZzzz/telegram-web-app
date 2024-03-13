@@ -11,6 +11,12 @@ app.get('/', (req, res) => {
     res.send(htmlContent);
 });
 
+app.get('/index.js', (req, res) => {
+    const htmlContent = fs.readFileSync(path.join(__dirname, 'index.js'), 'utf8');
+    res.setHeader('Content-Type', 'text/javascript');
+    res.send(htmlContent);
+});
+
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
