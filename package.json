@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "express": "^4.18.3"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "telegram-web-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "telegram-web-app"
+  },
+  "keywords": [
+    "tgweb"
+  ],
+  "author": "houzz",
+  "license": "ISC",
+  "description": ""
 }
