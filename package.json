@@ -8,7 +8,9 @@
   "name": "telegram-web-app",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.11.26"
+  },
   "repository": {
     "type": "git",
     "url": "telegram-web-app"
