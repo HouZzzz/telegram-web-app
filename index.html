@@ -33,13 +33,13 @@
         let usercard = document.getElementById("usercard"); //получаем блок usercard 
 
         let btnED = document.getElementById("btnED"); //получаем кнопку активировать/деактивировать
-        Telegram.WebApp.onEvent('mainButtonClicked', function(){
+        Telegram.WebApp.MainButton.onClick(() => {
             let notyfy = document.createElement('p')
             notify.innerText = "Кнопка была нажата"
             usercard.appendChild(notify)
             tg.sendData("отправлено!"); 
             //при клике на основную кнопку отправляем данные в строковом виде
-        });
+        })
 
 
         let profName = document.createElement('p'); //создаем параграф
