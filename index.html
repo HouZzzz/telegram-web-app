@@ -8,10 +8,12 @@
 </head>
 <body>
     <p id="main">default value</p>
+    <p id="theme">default theme value</p>
 
     <script>
         let tg = window.Telegram.WebApp;
-        document.getElementById("main").innerHTML = tg.initData
+        document.getElementById("main").innerHTML = JSON.stringify(tg.initDataUnsafe);
+        document.getElementById("main").innerHTML = JSON.stringify(tg.ThemeParams);
     </script>
 </body>
 </html>
