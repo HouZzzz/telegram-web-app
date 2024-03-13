@@ -5,15 +5,5 @@
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/server.js" }
-  ],
-  "install": {
-    "includeFiles": ["**/*"],
-    "includeCommands": ["npm install"]
-  },
-  "builds": [
-    { 
-      "src": "/api/index.ts",
-      "use": "@now/node"
-    }
   ]
 }
