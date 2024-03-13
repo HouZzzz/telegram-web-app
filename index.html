@@ -35,14 +35,14 @@
 
         let btnED = document.getElementById("btnED"); //получаем кнопку активировать/деактивировать
         btnED.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-            if (tg.MainButton.isActive){ //если кнопка показана 
-                tg.MainButton.setParams({"color": "#E0FFFF"}); //меняем цвет
-                tg.MainButton.disable() //скрываем кнопку 
-            }
-            else{ //иначе
-                tg.MainButton.setParams({"color": "#143F6B"}); //меняем цвет
-                tg.MainButton.enable() //показываем 
-            }
+            // if (tg.MainButton.isActive){ //если кнопка показана 
+            //     tg.MainButton.setParams({"color": "#E0FFFF"}); //меняем цвет
+            //     tg.MainButton.disable() //скрываем кнопку 
+            // }
+            // else{ //иначе
+            //     tg.MainButton.setParams({"color": "#143F6B"}); //меняем цвет
+            //     tg.MainButton.enable() //показываем 
+            // }
 
             Telegram.WebApp.onEvent('mainButtonClicked', function(){
                 let notyfy = document.createElement('p')
