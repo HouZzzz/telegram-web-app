@@ -7,8 +7,8 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
- <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
-   </div>
+    <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
+    </div>
    <p>Just text</p> <!--Просто текст для проверки-->
    <a class="link" href="https://mihailgok.ru">Link</a> <!--Просто ссылка для проверки-->
    <p class="hint">Some little hint</p> <!--Просто текст-подсказка для проверки-->
@@ -20,22 +20,11 @@
         // tg.expand(); //расширяем на все окно  
 
         tg.MainButton.text = "Отправить"; //изменяем текст кнопки 
-        tg.MainButton.textColor = "#FFF"; //изменяем цвет текста кнопки
-        // tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры 
-        btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-            if (tg.MainButton.isVisible){ //если кнопка показана 
-                tg.MainButton.hide() //скрываем кнопку 
-            }
-            else{ //иначе
-            tg.MainButton.show() //показываем 
-            }
-        });
+        tg.MainButton.textColor = "#FFFFF"; //изменяем цвет текста кнопки
         Telegram.WebApp.MainButton.onClick(() => tg.sendData("отправлено!"));
 
+
         let usercard = document.getElementById("usercard"); //получаем блок usercard 
-
-        let btnED = document.getElementById("btnED"); //получаем кнопку активировать/деактивировать
-
         let profName = document.createElement('p'); //создаем параграф
         profName.innerText = `${tg.initDataUnsafe.user.first_name}
         ${tg.initDataUnsafe.user.last_name}
